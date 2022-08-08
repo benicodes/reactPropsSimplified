@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import MyProducts from './components/MyProducts';
+import ProductDestructure from './components/ProductDestructure';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyProducts
+        name='Sweater'
+        description='this product has fantastic feature'
+        price={2000}
+      />
+
+      <MyProducts
+        name='Bom short'
+        description='this product has fantastic feature'
+        price={1000}
+      />
+      <hr />
+      <ProductDestructure 
+        student='Anietie Bassey'
+        subject='Mathematics'
+        score={68}
+      />
+      <hr />
+      <ProductDestructure />
     </div>
   );
 }
